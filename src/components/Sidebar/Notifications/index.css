@@ -1,0 +1,33 @@
+
+
+#notif-list{
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .notif-list-item{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 12px;
+        margin: 0px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(240, 240, 240);
+    }
+    &:first-child{
+        border-top: 1px solid grey;
+    }
+    & div{
+        width: 90%;
+        .elipses-text{
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+}

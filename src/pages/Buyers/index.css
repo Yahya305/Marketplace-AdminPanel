@@ -1,0 +1,49 @@
+#main-buyers{
+    height: 90%;
+}
+#buyers-container{
+    display: grid;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    /* grid-template-columns: repeat(10,120px); */
+    grid-template-columns: repeat(2,120px) 200px 150px repeat(5,120px) 180px;
+    grid-template-rows: 60px;   /* height for the first row */
+    grid-auto-rows: 75px;       /* default height for the remaining rows */
+}
+#buyers-container::-webkit-scrollbar{
+    display: none;
+}
+#buyers-container .table-item{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+#buyers-container .table-item:nth-child(20n + 11),
+#buyers-container .table-item:nth-child(20n + 12),
+#buyers-container .table-item:nth-child(20n + 13),
+#buyers-container .table-item:nth-child(20n + 14),
+#buyers-container .table-item:nth-child(20n + 15),
+#buyers-container .table-item:nth-child(20n + 16),
+#buyers-container .table-item:nth-child(20n + 17),
+#buyers-container .table-item:nth-child(20n + 18),
+#buyers-container .table-item:nth-child(20n + 19),
+#buyers-container .table-item:nth-child(20n + 20){
+    background-color: rgb(235, 239, 241);
+}
+
+#buyers-container .table-header{
+    font-weight: 600;
+    background-color: grey;
+    color: white;
+    /* height: 100px; */
+}
+#buyers-container .table-item.ellipsis span{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}

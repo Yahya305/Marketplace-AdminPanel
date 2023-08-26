@@ -1,0 +1,84 @@
+.article {
+    /* width: 82vw; */
+    height: 92vh;
+    overflow-y: auto;
+    .article-content {
+      width: 70%;
+      margin: auto;
+      padding-inline: 40px;
+      padding-top: 40px;
+      .article-back-btn {
+        color: #3c79cb;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    #operation-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 40px;
+      .opcard {
+        width: 45%;
+        height: fit-content;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 0.1rem 3.3rem rgba(217, 223, 231, 0.6);
+        border-radius: 10px;
+        & img {
+          width: 100%;
+          object-fit: fill;
+          height: 40%;
+          margin: 0;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        & p {
+          text-align: center;
+          color: #505562;
+          width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* Change this to the number of lines you want to display */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .card-footer {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: #3c79cb;
+          font-weight: bold;
+          font-size: large;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  @media(width<=1024px){
+    .article .article-content{
+      width: 90%;
+    }
+  }
+  @media(width<=600px){
+    .article .article-content{
+      width: 95%;
+    }
+    .article .article-content img{
+      height: auto !important;
+    }
+    .article .article-content p{
+      font-size: 0.85rem;
+    }.article .article-content ul{
+      font-size: 0.85rem;
+    }
+    .article #operation-cards .opcard{
+      width: 100%;
+    }
+  }
+

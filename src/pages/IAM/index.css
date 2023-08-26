@@ -1,0 +1,49 @@
+#main-iam{
+    height: 90%;
+}
+#iam-container{
+    display: grid;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    /* grid-template-columns: repeat(10,120px); */
+    grid-template-columns: repeat(2,120px) 200px 150px 120px 150px repeat(3,120px) 180px;
+    grid-template-rows: 60px;   /* height for the first row */
+    grid-auto-rows: 75px;       /* default height for the remaining rows */
+}
+#iam-container::-webkit-scrollbar{
+    display: none;
+}
+#iam-container .table-item{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+#iam-container .table-item:nth-child(20n + 11),
+#iam-container .table-item:nth-child(20n + 12),
+#iam-container .table-item:nth-child(20n + 13),
+#iam-container .table-item:nth-child(20n + 14),
+#iam-container .table-item:nth-child(20n + 15),
+#iam-container .table-item:nth-child(20n + 16),
+#iam-container .table-item:nth-child(20n + 17),
+#iam-container .table-item:nth-child(20n + 18),
+#iam-container .table-item:nth-child(20n + 19),
+#iam-container .table-item:nth-child(20n + 20){
+    background-color: rgb(235, 239, 241);
+}
+
+#iam-container .table-header{
+    font-weight: 600;
+    background-color: grey;
+    color: white;
+    /* height: 100px; */
+}
+#iam-container .table-item.ellipsis span{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}

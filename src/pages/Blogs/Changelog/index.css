@@ -1,0 +1,216 @@
+#changelog-main {
+    /* width: 70%; */
+    padding: 15px;
+    height: 92vh;
+    overflow-y: auto;
+    /* margin: auto;
+    margin-top: 5rem; */
+    .year {
+      font-family: Lato, sans-serif;
+      margin-bottom: 4%;
+      padding: 0%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      & h1 {
+        font-size: 40px;
+        font-weight: bolder;
+      }
+      & a {
+        text-decoration: none;
+        color: #3c79cb;
+      }
+      .btn-year {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0px;
+        & li {
+          list-style: none;
+        }
+        & button {
+          margin-right: 1.25rem;
+          width: 5.5rem;
+          height: 2.2rem;
+          margin-top: 25%;
+          background-color: #ffffff;
+          font-size: 21px;
+          border: 1px solid #848a93;
+          &:hover {
+            border-color: #3c79cb;
+          }
+          & a {
+            text-decoration: none;
+            color: #848a93;
+            &:hover {
+              color: #3c79cb;
+            }
+          }
+        }
+      }
+    }
+  
+    .feature1a {
+      & h3 {
+        margin-top: -1.6em;
+        margin-bottom: 1.1em;
+        font-size: 30px;
+        font-weight: 650;
+      }
+      .carda {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 30px;
+        margin-bottom: 5%;
+        margin-top: 0%;
+        border: 2px solid white;
+        background-color: #ffffff;
+        width: 100%;
+        height: 35%;
+        color: #222222;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 16px;
+        overflow: hidden;
+        & h4 {
+          font-weight: bolder;
+        }
+        & a {
+          text-decoration: none;
+        }
+        .dashed {
+          display: flex;
+          flex-direction: column;
+          padding-left: 0;
+          list-style-type: none;
+          justify-content: flex-start;
+          list-style-type: none;
+          & li {
+            line-height: 2rem;
+            margin-left: 30px;
+            position: relative;
+            &::before {
+              content: "-";
+              /* You can change this to any other symbol if desired */
+              position: absolute;
+              left: -30px;
+              /* Adjust this value to control the indentation of the bullet */
+            }
+          }
+        }
+        .imagethumbbox {
+          display: flex;
+          justify-content: flex-start;
+          .thumbnailimage {
+            height: 7em;
+            width: 10em;
+            cursor: pointer;
+            padding-bottom: 1em;
+          }
+          & img {
+            margin: 0rem 1rem;
+            &:hover {
+              color: #848a93;
+              opacity: 0.3;
+              transition: delay 1s;
+            }
+          }
+        }
+      }
+    }
+    @keyframes myimg {
+      from {
+        opacity: 0;
+        /* Start the animation with 0 opacity (invisible) */
+        transform: scale(0);
+      }
+  
+      to {
+        opacity: 1;
+        /* End the animation with 100% opacity (visible) */
+        transform: scale(1);
+      }
+    }
+  }
+  .preview-changelog-modal{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      .preview-changelog-ss{
+          width: 80%;
+          height: 100%;
+          margin-inline: 3%;
+          object-fit: fill;
+      }
+  }
+
+  @media only screen and(max-width:700px) {
+    .modalbody img {
+      width: 100%;
+    }
+  
+    @media only screen and (max-width: 700px) {
+      .year {
+        margin: 3rem;
+        /* Adjust the margin for smaller screens */
+      }
+  
+      .year h1 {
+        font-size: 32px;
+        /* Adjust the font size for smaller screens */
+      }
+  
+      .btn-year button {
+        width: 100%;
+        /* Make buttons take full width on smaller screens */
+        margin: 0.5rem 0;
+        /* Adjust the vertical margin for smaller screens */
+      }
+  
+      .feature1a h3 {
+        margin-left: 3rem;
+        /* Adjust the margin for smaller screens */
+      }
+  
+      .carda {
+        color: #848a93;
+        background-color: #ffffff;
+        margin: 3rem;
+        /* Adjust the margin for smaller screens */
+        width: 100%;
+        /* Make cards take full width on smaller screens */
+      }
+  
+      .modalbody {
+        flex-direction: column;
+        /* Stack the elements vertically */
+      }
+  
+      .modalbody img {
+        max-height: 50vh;
+        /* Reduce the max height of the image on smaller screens */
+        max-width: 100%;
+        /* Make images take full width on smaller screens */
+      }
+  
+      .imagethumbbox {
+        flex-direction: column;
+        /* Stack the thumbnail images vertically */
+      }
+  
+      .imagethumbbox img {
+        margin: 0.5rem 0;
+        /* Adjust the vertical margin for smaller screens */
+      }
+    }
+  }
+  @media (width <= 500px){
+    .feature1a{
+      margin-top: 40px;
+    }
+  }

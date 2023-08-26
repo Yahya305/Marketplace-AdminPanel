@@ -1,0 +1,41 @@
+#main-grp-policy{
+    height: 90%;
+}
+#grp-container{
+    display: grid;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    /* grid-template-columns: repeat(10,120px); */
+    /* grid-template-columns: repeat(2,120px) 200px 150px repeat(5,120px); */
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 60px;   /* height for the first row */
+    grid-auto-rows: 75px;       /* default height for the remaining rows */
+}
+#grp-container::-webkit-scrollbar{
+    display: none;
+}
+#grp-container .table-item{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+#grp-container .table-item:nth-child(20n + 11),
+#grp-container .table-item:nth-child(20n + 12),
+#grp-container .table-item:nth-child(20n + 13),
+#grp-container .table-item:nth-child(20n + 14),
+#grp-container .table-item:nth-child(20n + 15),
+#grp-container .table-item:nth-child(20n + 16),
+#grp-container .table-item:nth-child(20n + 17),
+#grp-container .table-item:nth-child(20n + 18),
+#grp-container .table-item:nth-child(20n + 19),
+#grp-container .table-item:nth-child(20n + 20){
+    background-color: rgb(235, 239, 241);
+}
+#grp-container .table-header{
+    font-weight: 600;
+    background-color: grey;
+    color: white;
+    /* height: 100px; */
+}

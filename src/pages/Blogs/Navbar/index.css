@@ -1,0 +1,8 @@
+#blogs-nav{
+    padding: 10px;
+    background-color: white;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
