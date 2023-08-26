@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./index.css";
-import { updatePolicy } from "../../store/slices/PolicySlice";
+import { updatePolicy } from "../../store/slices/policySlice";
 
 export const iamObjects = [
   {
