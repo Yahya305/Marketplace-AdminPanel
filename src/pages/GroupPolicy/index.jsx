@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsPlusCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { addPolicy, removePolicy, renamePolicy } from "../../store/slices/PolicySlice";
+// import { addPolicy, removePolicy, renamePolicy } from "../../store/slices/PolicySlice";
 import Navbar from "../../components/Navbar";
 import "./index.css";
 
@@ -15,46 +15,46 @@ export default function index() {
   // let arrPol=[]
 
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const policies = useSelector((state) => {
-    return state.policySlice;
-  });
+  // const policies = useSelector((state) => {
+  //   return state.policySlice;
+  // });
 
-  let arrPol= new Array(policies.length)
+  // let arrPol= new Array(policies.length)
 
-  const handleToggle=(e)=>{
-    if (e.target.classList.contains("disabled")) {
-        return
-    }
-    if (e.target.classList.contains("active")) {
-      e.target.classList.remove("active")
-    }else{
-      e.target.classList.add("active")
-    }
-  }
-
-  // const trackChange=(polNo)=>{
-  //   set.add(polNo)
-  //   console.log(set)
-  //   arrPol[polNo]=document.getElementById(`grp-pol-${polNo}`).value
+  // const handleToggle=(e)=>{
+  //   if (e.target.classList.contains("disabled")) {
+  //       return
+  //   }
+  //   if (e.target.classList.contains("active")) {
+  //     e.target.classList.remove("active")
+  //   }else{
+  //     e.target.classList.add("active")
+  //   }
   // }
-  const trackChange=(polNo)=>{
-    dispatch(renamePolicy({id:polNo,role:document.getElementById(`grp-pol-${polNo}`).value}))
-  }
-  
-  const handleSave=()=>{
-    console.log("before Pol", arrPol)
-    set.forEach((pol)=>{
-      dispatch(renamePolicy({id:pol,role:arrPol[pol]}))
-    })
-    console.log('Done Successfully!',policies)
 
-  }
+  // // const trackChange=(polNo)=>{
+  // //   set.add(polNo)
+  // //   console.log(set)
+  // //   arrPol[polNo]=document.getElementById(`grp-pol-${polNo}`).value
+  // // }
+  // const trackChange=(polNo)=>{
+  //   dispatch(renamePolicy({id:polNo,role:document.getElementById(`grp-pol-${polNo}`).value}))
+  // }
+  
+  // const handleSave=()=>{
+  //   console.log("before Pol", arrPol)
+  //   set.forEach((pol)=>{
+  //     dispatch(renamePolicy({id:pol,role:arrPol[pol]}))
+  //   })
+  //   console.log('Done Successfully!',policies)
+
+  // }
 
   return (
     <>
-      <Navbar
+      {/* <Navbar
         searchBar={true}
         value={searchVal}
         onChange={(e) => setSearchVal(e.target.value)}
@@ -78,7 +78,6 @@ export default function index() {
           {policies.map((role, key) => {
             return (
               <React.Fragment key={key}>
-                {/* <div className="table-item fw-semibold">{role.role}</div> */}
                 <div className="table-item">
                 <input id={`grp-pol-${key}`} type="text" defaultValue={role.role} onChange={()=>trackChange(key,arrPol)} className="fw-semibold" style={{backgroundColor:"transparent", border:"none"}} />
                 </div>
@@ -171,7 +170,7 @@ export default function index() {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
